@@ -1,13 +1,31 @@
 import styled from "styled-components";
+import { FlexWrapper } from "./section";
+import COLORS from "../styles/colors";
 
 type SectionTitleProps = {
   children: React.ReactNode;
 };
 
-const Wrapper = styled.h2`
-  font-family: serif;
+export default function SectionTitle({ children }: SectionTitleProps) {
+  return (
+    <Wrapper>
+      <HeaderWrapper>{children}</HeaderWrapper>
+    </Wrapper>
+  );
+}
+const Wrapper = styled.aside`
+  ${FlexWrapper} & {
+    flex: 0 1 75px;
+    writing-mode: vertical-lr;
+    align-self: stretch;
+  }
 `;
 
-export default function SectionTitle({ children }: SectionTitleProps) {
-  return <Wrapper>{children}</Wrapper>;
-}
+const HeaderWrapper = styled.h2`
+  padding-inline: 6px;
+  border-right: 4px solid ${COLORS.primary};
+  height: 100%;
+  text-align: start;
+  text-transform: uppercase;
+  color: ${COLORS.grayMed}
+`;

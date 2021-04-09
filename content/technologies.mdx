@@ -1,1 +1,63 @@
-Skills and technologies >>
+import TechSkill from "../components/techSkill";
+import { ICON_SIZE, MAX_EXP_YEARS, ICON_COLOR } from "../lib/util";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiPhp,
+  SiHtml5,
+  SiCss3,
+  SiMysql,
+  SiGraphql,
+  SiDrupal,
+  SiWordpress,
+  SiNextDotJs,
+  SiGatsby,
+} from "react-icons/si";
+
+### Programming Languages
+
+<TechSkill skillName="JavaScript" exp="10" maxExp={MAX_EXP_YEARS}>
+  <SiJavascript title="JavaScript Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+<TechSkill skillName="php" exp="10" maxExp={MAX_EXP_YEARS}>
+  <SiPhp title="php Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+<TechSkill skillName="HTML" exp="10" maxExp={MAX_EXP_YEARS}>
+  <SiHtml5 title="HTML Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+<TechSkill skillName="CSS" exp="10" maxExp={MAX_EXP_YEARS}>
+  <SiCss3 title="CSS Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+<TechSkill skillName="MySql" exp="10" maxExp={MAX_EXP_YEARS}>
+  <SiMysql title="MySql Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+<TechSkill skillName="GraphQL" exp="2" maxExp={MAX_EXP_YEARS}>
+  <SiGraphql title="GraphQL Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+<TechSkill skillName="Typescript" exp="1" maxExp={MAX_EXP_YEARS}>
+  <SiTypescript title="Typescript Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+### Frameworks and Content Management
+
+<TechSkill skillName="Drupal" exp="10" maxExp={MAX_EXP_YEARS}>
+  <SiDrupal title="Drupal Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+<TechSkill skillName="Wordpress" exp="4" maxExp={MAX_EXP_YEARS}>
+  <SiWordpress title="Wordpress Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+<TechSkill skillName="Next.js" exp="2" maxExp={MAX_EXP_YEARS}>
+  <SiNextDotJs title="Next.js Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>
+
+<TechSkill skillName="Gatsby" exp="2" maxExp={MAX_EXP_YEARS}>
+  <SiGatsby title="Gatsby Logo" size={ICON_SIZE} color={ICON_COLOR} />
+</TechSkill>

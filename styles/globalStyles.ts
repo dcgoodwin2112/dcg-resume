@@ -81,7 +81,33 @@ select {
 
 /* Custom Global Styles */
 html {
-  color: ${COLORS.text}
+  font-family: 'Open Sans', -apple-system, sans-serif;
+  color: ${COLORS.text};
+  font-size: 18px;
+}
+
+a {
+  color: ${COLORS.primary}
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: ${COLORS.primaryDark};
+}
+
+h3 {
+  font-family: Merriweather, serif;
+  font-size: 1.2rem;
+  margin-block: 22px 6px;
+}
+
+ol, ul {
+  color: ${COLORS.grayDark}
+}
+
+time {
+  font-style: italic;
 }
 `;
 
