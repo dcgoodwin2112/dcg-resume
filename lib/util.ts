@@ -20,7 +20,7 @@ export function getMonthString(month: MonthInt): string {
   return Months[month];
 }
 
-export const ICON_SIZE = 36;
+export const ICON_SIZE = 28;
 
 export const ICON_COLOR = COLORS.grayDark;
 

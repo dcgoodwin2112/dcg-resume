@@ -1,32 +1,40 @@
-import styled from "styled-components"
-import COLORS from "../styles/colors"
-import { MAX_EXP_YEARS } from "../lib/util"
+import styled from "styled-components";
+import COLORS from "../styles/colors";
+import { MAX_EXP_YEARS } from "../lib/util";
 
 type MeterProps = {
   width: number;
-}
+};
 
 type TechSkillProps = {
-  children: React.ReactNode,
-  skillName: string,
-  exp: number,
-  maxExp: number,
-}
+  children: React.ReactNode;
+  skillName: string;
+  exp: number;
+  maxExp: number;
+};
 
-export default function TechSkill({children, skillName, exp, maxExp}: TechSkillProps) {
+export default function TechSkill({
+  children,
+  skillName,
+  exp,
+  maxExp,
+}: TechSkillProps) {
+  const skillId = `skill-${skillName.toLowerCase()}`;
   return (
     <SkillWrapper>
       {children}
-      <SkillTitleWrapper>{skillName}</SkillTitleWrapper>
-      <ExpLabelWrapper htmlFor={`skill-${skillName.toLowerCase()}`}>
-        Exp: {exp}{exp >= MAX_EXP_YEARS && '+'} year{exp > 1 && 's'}
+      <ExpLabelWrapper id={skillId}>
+        <SkillTitleWrapper>{skillName}</SkillTitleWrapper>
+        <SkillYearExpWrapper>
+          <ExpString exp={exp} maxExp={MAX_EXP_YEARS} />
+        </SkillYearExpWrapper>
       </ExpLabelWrapper>
       <MeterWrapper
-        id={`skill-${skillName.toLowerCase()}`}
         role="meter"
         aria-valuemin={0}
         aria-valuemax={maxExp}
         aria-valuenow={exp}
+        aria-labelledby={skillId}
       >
         <InnerMeter width={(exp / maxExp) * 100} />
       </MeterWrapper>
@@ -34,18 +42,27 @@ export default function TechSkill({children, skillName, exp, maxExp}: TechSkillP
   );
 }
 
+type ExpStringProps = {
+  exp: number;
+  maxExp: number;
+};
+
+function ExpString({ exp, maxExp }: ExpStringProps) {
+  const yearsExp = exp >= maxExp ? `${exp}+` : exp;
+  const yearsLabel = exp == 1 ? "year" : "years";
+  return (
+    <>
+      Exp: <SkillYearExpNumber>{yearsExp}</SkillYearExpNumber> {yearsLabel}
+    </>
+  );
+}
+
 const SkillWrapper = styled.div`
   margin: 36px 24px;
   max-width: 422px;
   display: grid;
-  grid-template-columns: 36px max-content 1fr;
+  grid-template-columns: 28px 1fr;
   align-items: end;
-`
-
-const SkillTitleWrapper = styled.div`
-  font-weight: bold;
-  padding-inline: 10px;
-  font-size: 1.1rem;
 `;
 
 const MeterWrapper = styled.div`
@@ -54,7 +71,8 @@ const MeterWrapper = styled.div`
   border: 1px solid ${COLORS.grayLight};
   border-radius: 3px;
   grid-column: 1 / 4;
-  margin-block: 2px;
+  margin-block: 3px;
+  overflow: hidden;
 `;
 
 const InnerMeter = styled.div<MeterProps>`
@@ -63,9 +81,25 @@ const InnerMeter = styled.div<MeterProps>`
   width: ${(props) => props.width}%;
 `;
 
-const ExpLabelWrapper = styled.label`
+const ExpLabelWrapper = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+`;
+
+const SkillTitleWrapper = styled.span`
+  font-weight: bold;
+  padding-inline: 10px;
+  font-size: 1.1rem;
+`;
+
+const SkillYearExpWrapper = styled.span`
   color: ${COLORS.grayDark};
   font-style: italic;
-  font-size: .9rem;
-  justify-self: end;
-`
+  font-size: 0.7rem;
+  letter-spacing: .04rem;
+`;
+const SkillYearExpNumber = styled.span`
+  color: ${COLORS.text};
+  font-weight: bold;
+`;
