@@ -10,5 +10,6 @@ export default function Section({ children }: SectionProps) {
 
 export const FlexWrapper = styled.section`
   display: flex;
-  padding-block: 18px;
+  margin-block-start: 36px;
+  margin-block-end: 36px;
 `;

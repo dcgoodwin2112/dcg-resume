@@ -5,11 +5,9 @@ import { useScrollPosition } from "../components/hooks/useScrollPosition";
 
 export default function SiteFooter() {
   const scrollPosition = useScrollPosition(200);
-  const headerPosition = scrollPosition === "top" ? "static" : "sticky";
   const nameAndTitle = (
     <>
       <span className="name">Dan&nbsp;Goodwin</span>
-      <span className="spacer"> | </span>
       <span className="title">Senior Web Application Developer</span>
     </>
   );
@@ -38,52 +36,56 @@ export default function SiteFooter() {
 const Wrapper = styled.header``;
 
 const HeadingWrapper = styled.div`
+  border-top: 10px solid ${COLORS.grayDark};
+  border-bottom: 2px solid ${COLORS.grayLight};
   width: 100%;
   margin: 0 auto;
   font-family: Merriweather, serif;
   background-color: ${COLORS.primary};
   color: ${COLORS.white};
-  padding: 25px 25px 22px 200px;
-  border-top: 10px solid ${COLORS.grayDark};
-  border-bottom: 2px solid ${COLORS.grayLight};
-
+  padding-block-start: 18px;
+  padding-block-end: 18px;
   & h1 {
-    font-size: 1.7rem;
+    text-align: center;
+    font-size: 1.4rem;
   }
-
   & .name {
-    display: block;
+    display: inline;
+    border-right: 2px solid ${COLORS.white};
+    padding-right: 1rem;
+    margin-right: 1rem;
   }
-
-  & .spacer {
-    display: none;
-    font-family: Open Sans, sans-serif;
-  }
-
   & .title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-style: italic;
     font-weight: normal;
     color: ${COLORS.bg};
     letter-spacing: 0.18rem;
   }
-
-  @media (min-width: 1101px) {
-    & .name,
-    & .spacer {
-      display: inline;
+  @media (min-width: 900px) and (max-width: 1080px) {
+    & img {
+      height: 100px;
     }
   }
-
-  @media (max-width: 1100px) {
-    & .title {
+  @media (max-width: 899px) {
+    & {
+      padding-inline-start: 120px;
+      padding-block-start: 20px;
+      padding-block-end: 20px;
+    }
+    & h1 {
+      text-align: left;
       font-size: 1rem;
     }
-  }
-
-  @media (max-width: 600px) {
+    & .name {
+      display: block;
+      border-right: none;
+    }
     & .title {
-      font-size: 1rem;
+      font-size: 0.9rem;
+    }
+    & img {
+      height: 88px;
     }
   }
 `;
@@ -103,16 +105,19 @@ const ScrollWrapper = styled.div`
   color: ${COLORS.white};
   border-bottom: 1px solid ${COLORS.primaryLight};
   font-family: Merriweather, serif;
-  font-size: 1.1rem;
-  padding-block: 8px;
+  font-size: 1rem;
+  padding-block-start: 4px;
+  padding-block-end: 4px;
 
-  & .spacer {
-    font-family: Open Sans, sans-serif;
+  & .name {
+    border-right: 1px solid ${COLORS.white};
+    padding-right: 1rem;
+    margin-right: 1rem;
   }
 
   & .title {
     font-style: italic;
-    font-size: 1rem;
+    font-size: .9rem;
     color: ${COLORS.grayLight};
   }
 `;

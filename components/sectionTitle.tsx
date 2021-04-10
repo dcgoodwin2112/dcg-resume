@@ -23,7 +23,7 @@ const Wrapper = styled.aside`
 
 const HeaderWrapper = styled.h2`
   padding-inline: 6px;
-  border-right: 4px solid ${COLORS.primary};
+  border-right: 4px solid ${COLORS.primaryLight};
   height: 100%;
   text-align: start;
   text-transform: uppercase;

@@ -52,7 +52,8 @@ function ExpString({ exp, maxExp }: ExpStringProps) {
   const yearsLabel = exp == 1 ? "year" : "years";
   return (
     <>
-      Exp: <SkillYearExpNumber>{yearsExp}</SkillYearExpNumber> {yearsLabel}
+      <AbbrWrapper title="experience">Exp</AbbrWrapper>:{" "}
+      <SkillYearExpNumber>{yearsExp}</SkillYearExpNumber> {yearsLabel}
     </>
   );
 }
@@ -71,7 +72,8 @@ const MeterWrapper = styled.div`
   border: 1px solid ${COLORS.grayLight};
   border-radius: 3px;
   grid-column: 1 / 4;
-  margin-block: 3px;
+  margin-block-start: 3px;
+  margin-block-end: 3px;
   overflow: hidden;
 `;
 
@@ -89,7 +91,8 @@ const ExpLabelWrapper = styled.div`
 
 const SkillTitleWrapper = styled.span`
   font-weight: bold;
-  padding-inline: 10px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
   font-size: 1.1rem;
 `;
 
@@ -97,9 +100,13 @@ const SkillYearExpWrapper = styled.span`
   color: ${COLORS.grayDark};
   font-style: italic;
   font-size: 0.7rem;
-  letter-spacing: .04rem;
+  letter-spacing: 0.04rem;
 `;
 const SkillYearExpNumber = styled.span`
   color: ${COLORS.text};
   font-weight: bold;
+`;
+
+const AbbrWrapper = styled.abbr`
+  text-decoration: inherit;
 `;
