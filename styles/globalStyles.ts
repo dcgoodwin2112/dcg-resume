@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import COLORS from "./colors"
+import BREAKPOINTS from "./breakpoints"
 
 const GlobalStyles = createGlobalStyle`
 /* CSS Reset */
@@ -86,6 +87,11 @@ html {
   font-size: 18px;
 }
 
+p {
+  line-height: 1.6rem;
+  margin-block-end: 10px;
+}
+
 a {
   color: ${COLORS.primary}
 }
@@ -98,16 +104,24 @@ a:hover {
 
 h3 {
   font-family: Merriweather, serif;
-  font-size: 1.2rem;
-  margin-block: 22px 6px;
+  font-size: 1.45rem;
+  font-weight: normal;
+  margin-block: 28px 4px;
 }
 
 ol, ul {
-  color: ${COLORS.grayDark}
+  color: ${COLORS.grayDark};
+  padding-left: 20px;
 }
 
 time {
   font-style: italic;
+}
+
+@media (max-width: ${BREAKPOINTS.sm}px) {
+  h3 {
+    font-size: 1.3rem;
+  }
 }
 `;
 

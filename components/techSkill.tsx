@@ -59,11 +59,15 @@ function ExpString({ exp, maxExp }: ExpStringProps) {
 }
 
 const SkillWrapper = styled.div`
-  margin: 36px 24px;
-  max-width: 422px;
+  margin: 24px 0 36px;
+  max-width: 475px;
   display: grid;
   grid-template-columns: 28px 1fr;
   align-items: end;
+
+  &:last-of-type {
+    margin-block-end: 12px;
+  }
 `;
 
 const MeterWrapper = styled.div`

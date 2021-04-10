@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import COLORS from "../styles/colors";
+import BREAKPOINTS from "../styles/breakpoints"
 import { useScrollPosition } from "../components/hooks/useScrollPosition";
 
 export default function SiteFooter() {
@@ -62,12 +63,13 @@ const HeadingWrapper = styled.div`
     color: ${COLORS.bg};
     letter-spacing: 0.18rem;
   }
-  @media (min-width: 900px) and (max-width: 1080px) {
+  @media (min-width: ${BREAKPOINTS.md +
+    1}px) and (max-width: ${BREAKPOINTS.lg}px) {
     & img {
       height: 100px;
     }
   }
-  @media (max-width: 899px) {
+  @media (max-width: ${BREAKPOINTS.md}px) {
     & {
       padding-inline-start: 120px;
       padding-block-start: 20px;
@@ -86,6 +88,14 @@ const HeadingWrapper = styled.div`
     }
     & img {
       height: 88px;
+    }
+  }
+  @media (max-width: ${BREAKPOINTS.sm}px) {
+    & h1 {
+      font-size: 0.9rem;
+    }
+    & .title {
+      font-size: 0.8rem;
     }
   }
 `;
@@ -117,7 +127,14 @@ const ScrollWrapper = styled.div`
 
   & .title {
     font-style: italic;
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: ${COLORS.grayLight};
+  }
+
+  @media (max-width: ${BREAKPOINTS.sm}px) {
+    border-bottom: 1px solid ${COLORS.white};
+    & .title {
+      font-size: 0.8rem;
+    }
   }
 `;

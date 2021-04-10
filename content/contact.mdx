@@ -1,0 +1,15 @@
+import { SiTwitter, SiLinkedin, SiGithub } from "react-icons/si";
+import { ICON_SIZE, ICON_COLOR } from "../lib/util";
+import ContactLink from "../components/contactLink";
+
+<ContactLink linkText="GitHub" linkUrl="https://github.com/dcgoodwin2112">
+  <SiGithub size={ICON_SIZE} color={ICON_COLOR} />
+</ContactLink>
+
+<ContactLink linkText="Twitter" linkUrl="https://twitter.com/dcgoodwin2112">
+  <SiTwitter size={ICON_SIZE} color={ICON_COLOR} />
+</ContactLink>
+
+<ContactLink linkText="LinkedIn" linkUrl="https://www.linkedin.com/in/dcgoodwin2112/">
+  <SiLinkedin size={ICON_SIZE} color={ICON_COLOR} />
+</ContactLink>

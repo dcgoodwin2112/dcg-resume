@@ -19,5 +19,5 @@ export default function Layout({ children }: LayoutProps) {
 const ContentWrapper = styled.div`
   max-width: 800px;
   margin: 0 auto;
-  padding: 8px 12px 8px 0;
+  padding-inline-end: 18px;
 `;

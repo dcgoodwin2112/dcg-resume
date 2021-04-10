@@ -13,6 +13,11 @@ export default function SectionContent({ children }: SectionContentProps) {
 const Wrapper = styled.div`
   ${FlexWrapper} & {
     flex: 1 1 100%;
+    margin-inline-start: 24px;
+  }
+
+  & h3 {
+    margin-inline-start: -24px;
   }
 
   & h3:first-of-type {

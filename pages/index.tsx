@@ -9,6 +9,7 @@ import Technologies from "../content/technologies.mdx";
 import Certifications from "../content/certifications.mdx";
 import Experience from "../content/experience.mdx";
 import Education from "../content/education.mdx"
+import Contact from "../content/contact.mdx";
 
 export default function Home() {
   return (
@@ -37,12 +38,6 @@ export default function Home() {
           </SectionContent>
         </Section>
         <Section>
-          <SectionTitle>Certifications</SectionTitle>
-          <SectionContent>
-            <Certifications />
-          </SectionContent>
-        </Section>
-        <Section>
           <SectionTitle>Experience</SectionTitle>
           <SectionContent>
             <Experience />
@@ -52,6 +47,18 @@ export default function Home() {
           <SectionTitle>Education</SectionTitle>
           <SectionContent>
             <Education />
+          </SectionContent>
+        </Section>
+        <Section>
+          <SectionTitle>Certifications</SectionTitle>
+          <SectionContent>
+            <Certifications />
+          </SectionContent>
+        </Section>
+        <Section>
+          <SectionTitle>Contact</SectionTitle>
+          <SectionContent>
+            <Contact />
           </SectionContent>
         </Section>
       </Layout>
