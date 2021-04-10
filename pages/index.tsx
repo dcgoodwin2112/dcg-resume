@@ -1,6 +1,5 @@
-import Head from "next/head";
-import { GoogleFonts } from "next-google-fonts"
 import Layout from "../components/layout"
+import DocHead from "../components/docHead"
 import Section from "../components/section";
 import SectionTitle from "../components/sectionTitle";
 import SectionContent from "../components/sectionContent"
@@ -15,16 +14,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <GoogleFonts href="https://fonts.googleapis.com/css2?family=Open+Sans&Merriweather&display=swap" />
-        <Head>
-          <meta charSet="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <title>Dan Goodwin | Sr. Full-stack Web Application Developer</title>
-        </Head>
+        <DocHead />
         <Section>
           <SectionTitle>About</SectionTitle>
           <SectionContent>
