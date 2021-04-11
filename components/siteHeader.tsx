@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styled from "styled-components";
 import COLORS from "../styles/colors";
 import BREAKPOINTS from "../styles/breakpoints"
@@ -17,7 +16,7 @@ export default function SiteFooter() {
       <Wrapper>
         <HeadingWrapper>
           <ImageWrapper>
-            <Image
+            <img
               src="/images/dcg-headshot-cropped.png"
               width={144}
               height={144}
@@ -67,6 +66,7 @@ const HeadingWrapper = styled.div`
     1}px) and (max-width: ${BREAKPOINTS.lg}px) {
     & img {
       height: 100px;
+      width: 100px;
     }
   }
   @media (max-width: ${BREAKPOINTS.md}px) {
@@ -88,6 +88,7 @@ const HeadingWrapper = styled.div`
     }
     & img {
       height: 88px;
+      width: 88px;
     }
   }
   @media (max-width: ${BREAKPOINTS.sm}px) {
