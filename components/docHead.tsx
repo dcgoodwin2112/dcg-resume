@@ -14,7 +14,10 @@ export default function DocHead({ children }: DocHeadProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <title>Dan Goodwin</title>
-        <meta name="description">Sr. Full-stack Web Application Developer</meta>
+        <meta
+          name="description"
+          content="Sr. Full-stack Web Application Developer"
+        />
         {children}
       </Head>
     </>
