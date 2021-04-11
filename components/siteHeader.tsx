@@ -17,7 +17,7 @@ export default function SiteFooter() {
         <HeadingWrapper>
           <ImageWrapper>
             <img
-              src="/images/dcg-headshot-cropped.png"
+              src="/images/dcg-headshot-cropped-244.png"
               width={144}
               height={144}
               alt="Picture of Dan Goodwin"
