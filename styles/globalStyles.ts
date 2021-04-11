@@ -118,6 +118,10 @@ time {
   font-style: italic;
 }
 
+.org-name {
+  letter-spacing: .08rem;
+}
+
 @media (max-width: ${BREAKPOINTS.sm}px) {
   h3 {
     font-size: 1.3rem;

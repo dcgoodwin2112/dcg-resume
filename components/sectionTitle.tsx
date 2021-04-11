@@ -14,7 +14,7 @@ export default function SectionTitle({ children }: SectionTitleProps) {
     </Wrapper>
   );
 }
-const Wrapper = styled.aside`
+const Wrapper = styled.header`
   ${FlexWrapper} & {
     flex: 0 1 100px;
     writing-mode: vertical-lr;

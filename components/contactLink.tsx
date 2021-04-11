@@ -13,12 +13,10 @@ export default function ContactLink({
 }: ContactLinkProps) {
   return (
     <Wrapper>
-      <LinkWrapper href={linkUrl}>
+      <LinkWrapper href={linkUrl} tabIndex={-1}>
         {children}
       </LinkWrapper>
-      <LinkWrapper href={linkUrl}>
-        {linkText}
-      </LinkWrapper>
+      <LinkWrapper href={linkUrl}>{linkText}</LinkWrapper>
     </Wrapper>
   );
 }
