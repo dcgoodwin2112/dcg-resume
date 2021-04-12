@@ -13,10 +13,10 @@ export default function ContactLink({
 }: ContactLinkProps) {
   return (
     <Wrapper>
-      <LinkWrapper href={linkUrl} tabIndex={-1}>
-        {children}
+      <LinkWrapper href={linkUrl}>
+        <IconWrapper>{children}</IconWrapper>
+        <SpanWrapper>{linkText}</SpanWrapper>
       </LinkWrapper>
-      <LinkWrapper href={linkUrl}>{linkText}</LinkWrapper>
     </Wrapper>
   );
 }
@@ -24,9 +24,20 @@ export default function ContactLink({
 const Wrapper = styled.div`
   margin-block-start: 12px;
   margin-block-end: 12px;
-  display: flex;
 `;
 
 const LinkWrapper = styled.a`
+  text-decoration: none;
+  display: flex;
+`;
+
+const IconWrapper = styled.div`
   flex-basis: 36px;
+`;
+
+const SpanWrapper = styled.span`
+  display: inline-block;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
