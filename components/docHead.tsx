@@ -6,6 +6,10 @@ type DocHeadProps = {
 };
 
 export default function DocHead({ children }: DocHeadProps) {
+  const imgUrl =
+    "https://resume.dcgoodwin.dev/images/dcg-headshot-cropped-244.png";
+  const title = "Dan Goodwin";
+  const description = "Sr. Full-stack Web Application Developer";
   return (
     <>
       <GoogleFonts href="https://fonts.googleapis.com/css2?family=Open+Sans&Merriweather&display=swap" />
@@ -13,23 +17,19 @@ export default function DocHead({ children }: DocHeadProps) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <title>Dan Goodwin</title>
-        <meta
-          name="description"
-          content="Sr. Full-stack Web Application Developer"
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@dcgoodwin2112" />
-        <meta name="twitter:title" content="Dan Goodwin" />
-        <meta
-          name="twitter:description"
-          content="Sr. Full-stack Web Application Developer."
-        />
-        <meta
-          name="twitter:image"
-          content="https://resume.dcgoodwin.dev/images/dcg-headshot-cropped-244.png"
-        />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={imgUrl} />
         <meta name="twitter:image:alt" content="Photo of Dan Goodwin" />
+        <meta property="og:image" content={imgUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
         {children}
       </Head>
     </>
