@@ -27,8 +27,9 @@ export default function DocHead({ children }: DocHeadProps) {
         />
         <meta
           name="twitter:image"
-          content="/images/dcg-headshot-cropped-244.png"
+          content="https://resume.dcgoodwin.dev/images/dcg-headshot-cropped-244.png"
         />
+        <meta name="twitter:image:alt" content="Photo of Dan Goodwin" />
         {children}
       </Head>
     </>
