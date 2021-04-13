@@ -18,6 +18,17 @@ export default function DocHead({ children }: DocHeadProps) {
           name="description"
           content="Sr. Full-stack Web Application Developer"
         />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@dcgoodwin2112" />
+        <meta name="twitter:title" content="Dan Goodwin" />
+        <meta
+          name="twitter:description"
+          content="Sr. Full-stack Web Application Developer."
+        />
+        <meta
+          name="twitter:image"
+          content="/images/dcg-headshot-cropped-244.png"
+        />
         {children}
       </Head>
     </>
