@@ -7,7 +7,7 @@ type DocHeadProps = {
 
 export default function DocHead({ children }: DocHeadProps) {
   const imgUrl =
-    "https://resume.dcgoodwin.dev/images/dcg-headshot-cropped-244.png";
+    "https://resume.dcgoodwin.dev/images/og-image-dcgoodwin.jpg";
   const title = "Dan Goodwin";
   const description = "Sr. Full-stack Web Application Developer";
   return (
@@ -19,7 +19,7 @@ export default function DocHead({ children }: DocHeadProps) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dcgoodwin2112" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -28,8 +28,8 @@ export default function DocHead({ children }: DocHeadProps) {
         <meta property="og:image" content={imgUrl} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
         {children}
       </Head>
     </>
