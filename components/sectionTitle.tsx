@@ -35,7 +35,8 @@ const Wrapper = styled.header`
 `;
 
 const HeaderWrapper = styled.h2`
-  padding-inline: 6px;
+  padding-inline-start: 6px;
+  padding-inline-end: 6px;
   border-right: 3px solid ${COLORS.primaryLight};
   height: 100%;
   text-align: start;
