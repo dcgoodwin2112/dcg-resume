@@ -106,7 +106,8 @@ h3 {
   font-family: Merriweather, serif;
   font-size: 1.45rem;
   font-weight: normal;
-  margin-block: 28px 4px;
+  margin-block-start: 28px;
+  margin-block-end: 4px;
 }
 
 ol, ul {
