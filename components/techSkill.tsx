@@ -68,6 +68,14 @@ const SkillWrapper = styled.div`
   &:last-of-type {
     margin-block-end: 12px;
   }
+
+  @media print {
+    margin: 8px 0 16px;
+    & svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
 `;
 
 const MeterWrapper = styled.div`
@@ -98,6 +106,10 @@ const SkillTitleWrapper = styled.span`
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   font-size: 1.1rem;
+
+  @media print {
+    font-size: .9rem;
+  }
 `;
 
 const SkillYearExpWrapper = styled.span`

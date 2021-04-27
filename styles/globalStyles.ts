@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components"
-import COLORS from "./colors"
-import BREAKPOINTS from "./breakpoints"
+import { createGlobalStyle } from "styled-components";
+import COLORS from "./colors";
+import BREAKPOINTS from "./breakpoints";
 
 const GlobalStyles = createGlobalStyle`
 /* CSS Reset */
@@ -128,6 +128,15 @@ time {
     font-size: 1.3rem;
   }
 }
+
+@media print {
+  html {
+    font-size: 14px;
+  }
+  .exclude-print {
+    display: none;
+  }
+}
 `;
 
-export default GlobalStyles
+export default GlobalStyles;

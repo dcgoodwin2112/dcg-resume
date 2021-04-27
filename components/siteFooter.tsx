@@ -3,9 +3,16 @@ import COLORS from "../styles/colors";
 
 export default function SiteFooter() {
   return (
-    <Wrapper>
-      <a href="https://github.com/dcgoodwin2112/dcg-resume">View on Github</a>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <a href="https://github.com/dcgoodwin2112/dcg-resume">View on Github</a>
+      </Wrapper>
+      <PrintWrapper>
+        This resume was built with React. <br />
+        View the full web version here:<br />
+        <a href="https://resume.dcgoodwin.dev">https://resume.dcgoodwin.dev</a>
+      </PrintWrapper>
+    </>
   );
 }
 
@@ -24,5 +31,17 @@ const Wrapper = styled.footer`
 
   & a:hover {
     color: ${COLORS.primaryLight};
+  }
+
+  @media print {
+    display: none;
+  }
+`;
+
+const PrintWrapper = styled.div`
+  display: none;
+  font-size: .7rem;
+  @media print {
+    display: inherit;
   }
 `;

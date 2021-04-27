@@ -49,16 +49,19 @@ const HeadingWrapper = styled.div`
   color: ${COLORS.white};
   padding-block-start: 18px;
   padding-block-end: 18px;
+
   & h1 {
     text-align: center;
     font-size: 1.4rem;
   }
+
   & .name {
     display: inline;
     border-right: 2px solid ${COLORS.white};
     padding-right: 1rem;
     margin-right: 1rem;
   }
+
   & .title {
     font-size: 1.2rem;
     font-style: italic;
@@ -66,6 +69,7 @@ const HeadingWrapper = styled.div`
     color: ${COLORS.bg};
     letter-spacing: 0.18rem;
   }
+
   @media (min-width: ${BREAKPOINTS.md +
     1}px) and (max-width: ${BREAKPOINTS.lg}px) {
     & img {
@@ -73,23 +77,28 @@ const HeadingWrapper = styled.div`
       width: 100px;
     }
   }
+
   @media (max-width: ${BREAKPOINTS.md}px) {
     & {
       padding-inline-start: 120px;
       padding-block-start: 20px;
       padding-block-end: 20px;
     }
+
     & h1 {
       text-align: left;
       font-size: 1rem;
     }
+
     & .name {
       display: block;
       border-right: none;
     }
+
     & .title {
       font-size: 0.9rem;
     }
+
     & img {
       height: 88px;
       width: 88px;
@@ -99,8 +108,20 @@ const HeadingWrapper = styled.div`
     & h1 {
       font-size: 0.9rem;
     }
+
     & .title {
       font-size: 0.8rem;
+    }
+  }
+
+  @media print {
+    border-top: none;
+    border-bottom: none;
+    & img {
+      position: relative;
+      top: -5px;
+      height: 68px;
+      width: 68px;
     }
   }
 `;
@@ -140,5 +161,9 @@ const ScrollWrapper = styled.div`
     & .title {
       font-size: 0.8rem;
     }
+  }
+
+  @media print {
+    display: none;
   }
 `;

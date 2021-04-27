@@ -45,7 +45,7 @@ export default function Home() {
             <Certifications />
           </SectionContent>
         </Section>
-        <Section>
+        <Section excludePrint={true}>
           <SectionTitle>Contact</SectionTitle>
           <SectionContent>
             <Contact />
