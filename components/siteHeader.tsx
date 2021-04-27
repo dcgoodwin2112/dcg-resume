@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import COLORS from "../styles/colors";
-import BREAKPOINTS from "../styles/breakpoints"
+import BREAKPOINTS from "../styles/breakpoints";
+import ScrollHeaderProgress from "./scrollHeaderProgress";
 import { useScrollPosition } from "../components/hooks/useScrollPosition";
 
 export default function SiteFooter() {
@@ -27,7 +28,10 @@ export default function SiteFooter() {
         </HeadingWrapper>
       </Wrapper>
       {scrollPosition === "scroll" && (
-        <ScrollWrapper>{nameAndTitle}</ScrollWrapper>
+        <ScrollWrapper>
+          <ScrollHeaderProgress />
+          {nameAndTitle}
+        </ScrollWrapper>
       )}
     </>
   );
@@ -117,7 +121,6 @@ const ScrollWrapper = styled.div`
   border-bottom: 1px solid ${COLORS.primaryLight};
   font-family: Merriweather, serif;
   font-size: 1rem;
-  padding-block-start: 4px;
   padding-block-end: 4px;
 
   & .name {

@@ -15,9 +15,9 @@ export function useScrollPosition(breakpoint = 300): Position {
         setScrollPos("scroll");
       }
     }
-    document.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return function cleanup() {
-      document.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollPos]);
 
