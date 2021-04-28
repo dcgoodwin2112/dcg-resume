@@ -8,6 +8,7 @@ import Technologies from "../content/technologies.mdx";
 import Certifications from "../content/certifications.mdx";
 import Experience from "../content/experience.mdx";
 import Education from "../content/education.mdx"
+import OpenSource from "../content/openSource.mdx";
 import Contact from "../content/contact.mdx";
 
 export default function Home() {
@@ -43,6 +44,12 @@ export default function Home() {
           <SectionTitle>Certifications</SectionTitle>
           <SectionContent>
             <Certifications />
+          </SectionContent>
+        </Section>
+        <Section>
+          <SectionTitle>Community and Open Source</SectionTitle>
+          <SectionContent>
+            <OpenSource />
           </SectionContent>
         </Section>
         <Section excludePrint={true}>

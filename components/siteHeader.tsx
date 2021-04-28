@@ -25,6 +25,14 @@ export default function SiteFooter() {
             />
           </ImageWrapper>
           <h1>{nameAndTitle}</h1>
+          <PrintWrapper>
+            This resume was built with React. <br />
+            View the full web version here:
+            <br />
+            <a href="https://resume.dcgoodwin.dev">
+              https://resume.dcgoodwin.dev
+            </a>
+          </PrintWrapper>
         </HeadingWrapper>
       </Wrapper>
       {scrollPosition === "scroll" && (
@@ -165,5 +173,22 @@ const ScrollWrapper = styled.div`
 
   @media print {
     display: none;
+  }
+`;
+
+const PrintWrapper = styled.div`
+  display: none;
+  font-family: Open Sans, sans-serif;
+  font-size: 0.6rem;
+  position: absolute;
+  top: 22px;
+  right: 24px;
+
+  & a {
+    color: ${COLORS.white};
+  }
+
+  @media print {
+    display: inherit;
   }
 `;

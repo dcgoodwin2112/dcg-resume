@@ -7,11 +7,6 @@ export default function SiteFooter() {
       <Wrapper>
         <a href="https://github.com/dcgoodwin2112/dcg-resume">View on Github</a>
       </Wrapper>
-      <PrintWrapper>
-        This resume was built with React. <br />
-        View the full web version here:<br />
-        <a href="https://resume.dcgoodwin.dev">https://resume.dcgoodwin.dev</a>
-      </PrintWrapper>
     </>
   );
 }
@@ -35,13 +30,5 @@ const Wrapper = styled.footer`
 
   @media print {
     display: none;
-  }
-`;
-
-const PrintWrapper = styled.div`
-  display: none;
-  font-size: .7rem;
-  @media print {
-    display: inherit;
   }
 `;
