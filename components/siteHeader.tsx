@@ -26,7 +26,7 @@ export default function SiteFooter() {
           </ImageWrapper>
           <h1>{nameAndTitle}</h1>
           <PrintWrapper>
-            This resume was built with React. <br />
+            This resume was built with React and Typescript. <br />
             View the full web version here:
             <br />
             <a href="https://resume.dcgoodwin.dev">
