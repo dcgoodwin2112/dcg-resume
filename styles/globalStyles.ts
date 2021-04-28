@@ -135,7 +135,7 @@ time {
   }
 
   h3 {
-    margin-block-start: 22px;
+    margin-block-start: 26px;
     margin-block-end: 4px;
   }
 
