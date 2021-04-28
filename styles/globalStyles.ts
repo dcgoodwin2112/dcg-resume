@@ -133,6 +133,16 @@ time {
   html {
     font-size: 14px;
   }
+
+  h3 {
+    margin-block-start: 22px;
+    margin-block-end: 4px;
+  }
+
+  ol, ul {
+    font-size: 0.9rem;
+  }
+
   .exclude-print {
     display: none;
   }
