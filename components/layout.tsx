@@ -10,7 +10,9 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div>
       <SiteHeader />
-      <ContentWrapper>{children}</ContentWrapper>
+      <main>
+        <ContentWrapper>{children}</ContentWrapper>
+      </main>
       <SiteFooter />
     </div>
   );
