@@ -136,7 +136,7 @@ time {
 
   h3 {
     margin-block-start: 26px;
-    margin-block-end: 4px;
+    margin-block-end: 8px;
   }
 
   ol, ul {

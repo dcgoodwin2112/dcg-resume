@@ -9,7 +9,7 @@ export default function SiteFooter() {
   const nameAndTitle = (
     <>
       <span className="name">Dan&nbsp;Goodwin</span>
-      <span className="title">Senior Web Application Developer</span>
+      <span className="title">Sr. Developer & Engineering Manager</span>
     </>
   );
   return (
